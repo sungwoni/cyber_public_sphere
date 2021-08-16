@@ -1,0 +1,43 @@
+.django_logo {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.django_footer_button {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: .9rem;
+}
+
+.django_footer {
+    font-family: 'Gowun Dodum', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.django_header {
+    font-family: 'Gowun Dodum', sans-serif;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+a {
+    color: black;
+}
+
+a:link, a:hover {
+    color: black;
+    text-decoration: none!important;
+}
+
+.poll_header_nav {
+    margin: 0 0.5rem;
+}
+
+.poll_header_navbar {
+    margin: 1rem 0;
+}

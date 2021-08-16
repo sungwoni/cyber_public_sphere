@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+{% static "" as baseUrl %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>success.html</title>
+    <style>
+        #wrap {width:350px; margin:auto;}
+        #wrap image {width:100px; }
+    </style>
+
+</head>
+<body>
+    <h2>설문이 완료되었습니다.</h2>
+    <img src="{{baseUrl}}/img/logo.jpg"><br>
+    <a href="/polls">투표하기</a>
+    <a href="results?survey_idx={{survey_idx}}">설문조사 결과 보기</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>list.html</title>
+    <style>
+        #wrap {width:550px; margin:auto}
+        .sub { background:yellow; font-size:30px;
+            font-family: 'Gowun Dodum', sans-serif;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <form method="post" action="save">
+        {% csrf_token %}
+        <p class="sub">{{survey.question}}</p>
+        <p><input type="radio" name="num" value="1"
+                  style="margin-right: 0.5rem; ">{{survey.ans1}}</p>
+        <p><input type="radio" name="num" value="2"
+                style="margin-right: 0.5rem; ">{{survey.ans2}}</p>
+        <p><input type="radio" name="num" value="3"
+                style="margin-right: 0.5rem; ">{{survey.ans3}}</p>
+        <p><input type="radio" name="num" value="4"
+                style="margin-right: 0.5rem; ">{{survey.ans4}}</p>
+        <p>
+            <input type="hidden" name="survey_idx" value="{{survey.survey_idx}}" >
+            <input type="submit" value="투표" style="font-family:'Gowun Dodum', sans-serif;">
+            <input type="button" value="결과확인" style="font-family:'Gowun Dodum', sans-serif;" onclick="results()">
+
+            <!--===============================================================-->
+            <!-- <input type="button" value="질문목록" onclick="location='list'">
+            <!--===============================================================-->
+        </p>
+
+    </form>
+    <script>
+        function results(){
+            location.href= "results?survey_idx={{survey.survey_idx}} ";
+        }
+    </script>
+</div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>result.html</title>
+</head>
+<body>
+<div id="wrap">
+    <h1>설문조사 결과보기</h1>
+    <table>
+        <tr>
+            <th>문항</th>
+            <th>응답수</th>
+        </tr>
+        {% for row, ans in surveyList %}
+        <tr>
+            <td>{{ans}}</td>
+            <td>{{row.sum_num}}</td>
+            <!--sql에 있는 테이블 row 가져오기-->
+        </tr>
+        {%endfor%}
+        <tr>
+            <td colspan="2">
+                <input type="button" value="투표하기" onclick="location='/polls'">
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
