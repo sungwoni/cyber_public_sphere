@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="kr">
 <head>
@@ -5,13 +7,19 @@
     <title>result.html</title>
 </head>
 <body>
-<div id="wrap">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+<div id="wrap" style="text-align: center;margin-top: 3rem; font-family: 'Gowun Dodum', sans-serif;">
     <h1>설문조사 결과보기</h1>
-    <table>
-        <tr>
+    <table style="margin-top: 5rem;text-align: center; margin: auto;">
+        <tr style="margin-top: 3rem; font-weight: bold;">
             <th>문항</th>
             <th>응답수</th>
         </tr>
+
         {% for row, ans in surveyList %}
         <tr>
             <td>{{ans}}</td>
@@ -21,7 +29,10 @@
         {%endfor%}
         <tr>
             <td colspan="2">
-                <input type="button" value="투표하기" onclick="location='/polls'">
+                <input style="font-family: 'Gowun Dodum', sans-serif; margin-top: 2rem;margin-left: 1rem;"
+                       type="button" value="투표하기" onclick="location='/polls'">
+                <input style="font-family: 'Gowun Dodum', sans-serif; margin-top: 2rem;margin-left: 1rem;"
+                       type="button" value="토론방 입장하기" onclick="location.href='/projects/list/'">
             </td>
         </tr>
     </table>

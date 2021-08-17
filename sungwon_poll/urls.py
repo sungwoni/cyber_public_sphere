@@ -31,5 +31,6 @@ urlpatterns = [
     path('projects/', include('projectapp.urls')),
     path('polls/', include('pollapp.urls')),
     path('likes/', include('likeapp.urls')),
-
+    path('about/', include('finalapp.urls')),
+    path('subscribe/', include('subscribeapp.urls')),
               ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -3,11 +3,11 @@
 {% block content %}
 
   <div>
-    <div style="text-align: center; max-width: 500px; margin: 4rem auto 1.5rem auto;">
+    <div style="text-align: center; max-width: 500px; margin: 4rem auto 1.5rem auto;font-family: 'Gowun Dodum', sans-serif;">
 
         <img src="{{ target_project.image.url }}" alt=""
            style="height: 12rem; width: 12rem; border-radius:  20rem; margin-bottom: 2rem; object-fit: cover;">
-      <h2 style="font-family: 'NanumSquareOTFBold'">
+      <h2 style="font-family: 'Gowun Dodum', sans-serif;">
         {{ target_project.title }}
       </h2>
         <h5>
@@ -15,21 +15,22 @@
         </h5>
     </div>
 
-    <div class="text-center mb-5">
+    <div class="text-center mb-5" style="font-family: 'Gowun Dodum', sans-serif;">
       {% if user.is_authenticated %}
         {% if not subscription %}
       <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
         class="btn btn-primary rounded-pill px-4">
-        Subscribe
+        구독하기
       </a>
         {% else %}
       <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
         class="btn btn-dark rounded-pill px-4">
-        Unsubscribe
+        구독 취소하기
       </a>
         {% endif %}
       {% endif %}
     </div>
+
 
     <div>
         {% include 'snippets/list_fragment.html' with article_list=object_list %}

@@ -32,16 +32,16 @@
     </div >
     <script src="{% static 'js/magicgrid.js' %}"></script>
     {% else %}
-    <div class="text-center">
-      <h1>No Articles YET!</h1>
+    <div class="text-center" style="font-family: 'Gowun Dodum', sans-serif;">
+      <h3>아직 작성된 게시글이 없습니다.</h3>
     </div>
     {% endif %}
 
     {% include 'snippets/pagination.html' with page_obj=page_obj %}
 
-    <div style="text-align: center">
+    <div style="text-align: center; font-family: 'Gowun Dodum', sans-serif;">
       <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill mt-3 mb-3 px-2">
-        Create Article
+        게시글 작성하러가기
       </a>
     </div>
 

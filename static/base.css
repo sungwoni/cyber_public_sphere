@@ -16,12 +16,13 @@
 .django_header {
     font-family: 'Gowun Dodum', sans-serif;
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem ;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 100px) {
     html {
         font-size: 13px;
+
     }
 }
 
@@ -40,4 +41,9 @@ a:link, a:hover {
 
 .poll_header_navbar {
     margin: 1rem 0;
+}
+
+.poll_footer {
+    font-family: 'Gowun Dodum', sans-serif;
+    text-align: center;
 }

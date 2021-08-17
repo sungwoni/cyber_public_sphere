@@ -35,16 +35,17 @@
     </div >
     <script src="{% static 'js/magicgrid.js' %}"></script>
     {% else %}
-    <div class="text-center">
-      <h1>No Projects YET!</h1>
+    <div class="text-center" style="font-family: 'Gowun Dodum', sans-serif;">
+      <h2>활성화된 토론방이 없습니다!</h2>
+      <h5>카테고리를 먼저 설정해주세요.</h5>
     </div>
     {% endif %}
 
     {% include 'snippets/pagination.html' with page_obj=page_obj %}
 
-    <div style="text-align: center">
+    <div style="text-align: center; font-family: 'Gowun Dodum', sans-serif;">
       <a href="{% url 'projectapp:create' %}" class="btn btn-dark rounded-pill mt-3 mb-3 px-2">
-        Create project
+        카테고리 설정하러 가기
       </a>
     </div>
 

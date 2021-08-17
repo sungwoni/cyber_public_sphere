@@ -5,16 +5,16 @@
 
 {% block content %}
 
-  <div style="text-align: center; max-width: 500px; margin: 4rem auto">
+  <div style="text-align: center; max-width: 500px; margin: 4rem auto;font-family: 'Gowun Dodum', sans-serif;">
       <div>
-        <h4>Login</h4>
+        <h4>로그인하기</h4>
       </div>
       <div>
         <form action="" method="post">
           {% csrf_token %}
 <!--          {{ form }}-->
           {% bootstrap_form form %}
-          <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3">
+          <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3" action="{% url 'projectapp:list' %}">
         </form>
       </div>
   </div>

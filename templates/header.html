@@ -8,8 +8,11 @@
                 <span>설문조사</span>
              </a>
              <a href="{% url 'articleapp:list' %}" class="poll_header_nav">
+                <span>게시글방</span>
+             </a>
+             <a href="{% url 'projectapp:list' %}" class="sungwon_header_nav">
                 <span>토론방</span>
-            </a>
+             </a>
             {% if not user.is_authenticated %}
             <a href="{% url 'accountapp:login' %}?next={{ request.path }}" class="poll_header_nav">
                 <span>로그인</span>
