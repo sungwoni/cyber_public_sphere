@@ -53,10 +53,12 @@ INSTALLED_APPS = [
     'sungwon_poll',
     'accountapp',
     'bootstrap4',
-    'articleapp',
     'commentapp',
     'profileapp',
     'pollapp',
+    'articleapp',
+    'projectapp',
+    'likeapp',
 ]
 
 MIDDLEWARE = [

@@ -18,14 +18,18 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from articleapp.views import ArticleListView
 from pollapp.models import Survey
 
 urlpatterns = [
-    path('', Survey, name='home'),
+    path('', ArticleListView.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('accountapp.urls')),
-    path('profiles/', include('profileapp.urls')),
     path('articles/', include('articleapp.urls')),
+    path('profiles/', include('profileapp.urls')),
     path('comments/', include('commentapp.urls')),
+    path('projects/', include('projectapp.urls')),
     path('polls/', include('pollapp.urls')),
+    path('likes/', include('likeapp.urls')),
+
               ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

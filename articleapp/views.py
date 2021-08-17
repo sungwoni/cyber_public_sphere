@@ -1,4 +1,3 @@
-
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
@@ -67,5 +66,3 @@ class ArticleListView(ListView):
 
     def get_queryset(self):
         return Article.objects.all().order_by('-pk')
-
-

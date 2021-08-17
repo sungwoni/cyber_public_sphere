@@ -1,4 +1,3 @@
-{% extends 'base.html' %}
 {% load bootstrap4 %}
 
 {% block content %}
@@ -7,7 +6,6 @@
     <div class="mb-4">
       <h4>Comment Create</h4>
     </div>
-
     <form action="{% url 'commentapp:create' %}" method="post">
       {% csrf_token %}
       {% bootstrap_form form %}
@@ -20,6 +18,7 @@
         Login
       </a>
       {% endif %}
+
       <input type="hidden" name="article_pk" value="{{ article.pk }}">
     </form>
   </div>
