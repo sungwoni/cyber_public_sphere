@@ -22,7 +22,7 @@
             </a>
             {% else %}
             <a href="{% url 'accountapp:detail' pk=user.pk %}" class="poll_header_nav">
-                <span>마이페이지</span>
+                <span>내페이지</span>
             </a>
             <a href="{% url 'accountapp:logout' %}?next={{ request.path }}" class="poll_header_nav">
                 <span>로그아웃</span>
