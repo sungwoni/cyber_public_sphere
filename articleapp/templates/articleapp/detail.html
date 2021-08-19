@@ -35,11 +35,11 @@
       {% if target_article.writer == user %}
       <a href="{% url 'articleapp:update' pk=target_article.pk %}"
       class="btn btn-primary rounded-pill col-3">
-        게시글 수정하기
+        게시글 수정
       </a>
       <a href="{% url 'articleapp:delete' pk=target_article.pk %}"
       class="btn btn-danger rounded-pill col-3">
-        게시글 삭제하기
+        게시글 삭제
       </a>
       {% endif %}
       <hr>
