@@ -19,12 +19,12 @@
       {% if user.is_authenticated %}
         {% if not subscription %}
       <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-        class="btn btn-primary rounded-pill col-2 mt-3">
+        class="btn btn-primary rounded-pill col-4 mt-3">
         구독하기
       </a>
         {% else %}
       <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-        class="btn btn-dark rounded-pill col-2 mt-3">
+        class="btn btn-dark rounded-pill col-4 mt-3">
         구독 취소하기
       </a>
         {% endif %}
